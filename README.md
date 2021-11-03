@@ -10,6 +10,7 @@ npm install
 在根目录创建 .env 文件，内容如下
 
 VITE_APPID=xxx
+
 VITE_SKINID=xxx
 
 3. 运行
