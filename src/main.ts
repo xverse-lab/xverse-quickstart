@@ -60,12 +60,12 @@ const app = new Vue({
   methods: {
     async initRoom() {
       const urlParam = new window.URLSearchParams(location.search)
-      const roomId = urlParam.get('roomId') || 'f8f54e5d-fd40-40a4-8e8f-e17ba41f4f5e' // roomId
+      const roomId = urlParam.get('roomId') || '5fca7c24-cb1a-491f-9944-35b90d23d4dd' // roomId
       const userId = urlParam.get('userId') || Math.random().toString(16).slice(2) // 业务方的 uid
       this.userId = userId
       const appId = (urlParam.get('appId') || import.meta.env.VITE_APPID) as string
       const skinId = (urlParam.get('skinId') || import.meta.env.VITE_SKINID) as string
-      const wsServerUrl = urlParam.get('ws') ? decodeURIComponent(urlParam.get('ws')!) : 'wss://uat-eks.xverse.cn/xverse/ws' // 测试用后台，后面正式环境可以不传
+      const wsServerUrl = urlParam.get('ws') ? decodeURIComponent(urlParam.get('ws')!) : 'wss://uat-eks.xverse.cn/kugou/ws' // 测试用后台，后面正式环境可以不传
       const avatarId = urlParam.get('avatarId') || '84c44466-b1df-4098-80e3-e0c49628a012' // 测试用 avatarId
       const role = urlParam.get('role') || (roomId ? 'audience' : 'host') // 主态 or 客态。默认主态
 
