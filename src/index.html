@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D 直播间</title>
+  <style>
+
+  </style>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+</head>
+
+<body>
+  <canvas id="canvas" class="stream"></canvas>
+  <div id="app" v-cloak>
+    <button v-if="isWexin" @click="initRoom" class="wx-button">进入直播间</button>
+    <div className="loading" id="loading" v-else-if="!loaded">
+      <img src="./loading.png" alt="" />
+      <div>即将进入3d直播间</div>
+    </div>
+    <div v-else>
+      <!-- <template v-if="isHost"> -->
+        <div v-if="showMinimap" class="minimap">
+          <div>选择前往的位置</div>
+          <button class="close-button" @click="showMinimap = !showMinimap">关闭</button>
+          <div class="area_list">
+            <div class="area_list-item" v-for="item in minimapList" @click="moveTo(item)">
+              {{ item.name }}
+              <div class="active-flag">
+                {{ activeMinimap === item.id ? '我在这里' : '' }}
+              </div>
+            </div>
+          </div>
+          <!-- <button @click="turnToFace">回到标准位置</button> -->
+        </div>
+
+        <div class="animation_list" v-if="animations.length && showAnimation">
+          <div class="animation_list-swiper">
+            <div class="animation_list-item" v-for="item in animations" @click="playAnimation(item)">{{ item }}</div>
+          </div>
+        </div>
+
+        <div class="control-panel">
+          <button @click="showMinimap = !showMinimap">
+            前往
+          </button>
+
+          <button @click="showAnimation = !showAnimation">
+            互动
+          </button>
+        </div>
+      <!-- </template> -->
+    </div>
+  </div>
+  <script src="./bundle.umd.js"></script>
+  <script src="https://static.xverse.cn/libs/vue/vue.js"></script>
+  <script type="text/javascript" src="https://static.xverse.cn/libs/axios/axios.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script type="module" src="./main.ts"></script>
+</body>
+
+</html>
