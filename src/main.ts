@@ -68,6 +68,7 @@ const app = new Vue({
       const wsServerUrl = urlParam.get('ws') ? decodeURIComponent(urlParam.get('ws')!) : 'wss://uat-eks.xverse.cn/kugou/ws' // 测试用后台，后面正式环境可以不传
       const avatarId = urlParam.get('avatarId') || '84c44466-b1df-4098-80e3-e0c49628a012' // 测试用 avatarId
       const role = urlParam.get('role') || (roomId ? 'audience' : 'host') // 主态 or 客态。默认主态
+      const skinDataVersion = urlParam.get('skinDataVersion') || '1000200002'
 
       const xverse = new Xverse({
         debug: true
@@ -82,7 +83,7 @@ const app = new Vue({
           userId,
           role: role!,
           appId: appId,
-          skinDataVersion: '10002005',
+          skinDataVersion,
           wsServerUrl
         })
       } catch (error) {
