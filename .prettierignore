@@ -1,0 +1,8 @@
+# Ignore artifacts:
+build
+lib
+dist
+coverage
+
+# Ignore all HTML files:
+*.html
