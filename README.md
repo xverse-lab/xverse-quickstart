@@ -1,29 +1,9 @@
-- demo
+# Xverse.js
 
-1. 安装
+[![npm (scoped)](https://img.shields.io/npm/v/@xverse/core)](https://www.npmjs.com/package/@xverse/core)
 
-```
-npm install
-```
+> `@xverse/core` SDK 2.X 仓库
 
-2. 增加环境变量
-在根目录创建 .env 文件，内容如下
+-   如何参与开发：[跳转](./CONTRIBUTING.md)
 
-VITE_APPID=xxx
-
-VITE_SKINID=xxx
-
-3. 运行
-
-```
-npm run dev
-```
-
-打开两个 Tab，分别输入 http://localhost:5000/ （不需要额外参数，参数都写在 main.ts 里了）以模拟多人同时进入一个房间。
-房间ID固定为 main.ts 里提供的 f8f54e5d-fd40-40a4-8e8f-e17ba41f4f5e，不要更改。
-
-
-- 页面说明
-
-select.html # 选择 Avatar
-index.html  # 房间页
+-   使用文档：[跳转](https://docs.xverse.cn/docs/intro)

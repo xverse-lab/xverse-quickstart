@@ -1,0 +1,27 @@
+{
+    "npcSet":{
+        "npc_nan":{
+            "engineVersion": "V1",
+            "url": "wss://sit-audio.xverse.cn/server/multi_syn",
+            "appKey": "",
+            "accessToken": "",
+            "frameRate": 25,
+            "frameDim": 51,
+            "speakerId": "tx_008",
+            "styleId": "",
+            "expressionScale": "0.5"
+        },
+        "npc_youtu":{
+            "engineVersion": "V2",
+            "url": "wss://gw.tvs.qq.com/v2/ws/vpdriver?",
+            "appKey": "efd81a60753f11ed90689ffb1c79a039",
+            "accessToken": "50f4ca6bd2df485c9ca46a6e89b00fc7",
+            "frameRate": 25,
+            "frameDim": 32,
+            "speakerId": "47",
+            "styleId": "0",
+            "expressionScale": "0"
+        }
+    }
+}
+

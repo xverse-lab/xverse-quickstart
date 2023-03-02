@@ -1,0 +1,40 @@
+.dress_list {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  background: #fff;
+  height: 100vh;
+  overflow: auto;
+  width: 220px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.dress_list-swiper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.dress_list-item .active{
+  color:#015ce3;
+}
+.dress_list-item.active{
+  color:#015ce3;
+}
+.dress_list-item {
+  padding: 0 6px;
+  border-right: 1px solid #ccc;
+  margin-right: 10px;
+}
+.dress_list-item >span {
+  font-weight: 600;
+  background-color: #4ce6f1;
+  width: 100%;
+  display: inline-block;
+}

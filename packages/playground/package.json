@@ -1,0 +1,10 @@
+{
+  "name": "@xverse/playground",
+  "private": true,
+  "version": "2.1.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  }
+}
